@@ -25,14 +25,14 @@ st.set_page_config(
 )
 
 # ── Palette ────────────────────────────────────────────────────────────────────
-INDIGO = "#6366F1"
-VIOLET = "#8B5CF6"
-PINK = "#EC4899"
-CYAN = "#06B6D4"
-EMERALD = "#10B981"
+INDIGO = "#D97706"
+VIOLET = "#EA580C"
+PINK = "#F97316"
+CYAN = "#FB923C"
+EMERALD = "#65A30D"
 AMBER = "#F59E0B"
-ROSE = "#F43F5E"
-BLUE = "#3B82F6"
+ROSE = "#DC2626"
+BLUE = "#C2410C"
 PALETTE = [INDIGO, PINK, CYAN, AMBER, EMERALD, VIOLET, ROSE, BLUE]
 
 # ── Custom CSS ─────────────────────────────────────────────────────────────────
@@ -42,21 +42,21 @@ st.markdown(
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 :root {
-    --indigo: #6366F1;
-    --violet: #8B5CF6;
-    --pink: #EC4899;
-    --cyan: #06B6D4;
-    --emerald: #10B981;
+    --indigo: #D97706;
+    --violet: #EA580C;
+    --pink: #F97316;
+    --cyan: #FB923C;
+    --emerald: #65A30D;
     --amber: #F59E0B;
-    --rose: #F43F5E;
-    --ink: #1E1B4B;
-    --muted: #64748B;
-    --line: #E8EAFD;
+    --rose: #DC2626;
+    --ink: #431407;
+    --muted: #7C5E4A;
+    --line: #FED7AA;
     --card: #FFFFFF;
-    --grad-main: linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #EC4899 100%);
-    --grad-cool: linear-gradient(135deg, #06B6D4 0%, #6366F1 100%);
-    --shadow-sm: 0 2px 8px rgba(99, 102, 241, 0.08);
-    --shadow-md: 0 8px 24px rgba(99, 102, 241, 0.14);
+    --grad-main: linear-gradient(135deg, #D97706 0%, #EA580C 50%, #F97316 100%);
+    --grad-cool: linear-gradient(135deg, #FB923C 0%, #D97706 100%);
+    --shadow-sm: 0 2px 8px rgba(217, 119, 6, 0.08);
+    --shadow-md: 0 8px 24px rgba(217, 119, 6, 0.14);
 }
 
 /* ── Base ─────────────────────────────────────────── */
@@ -65,9 +65,9 @@ html, body, [class*="css"], .stApp, button, input, textarea, select {
 }
 .stApp {
     background:
-        radial-gradient(circle at 0% 0%, rgba(99,102,241,0.10) 0%, transparent 40%),
-        radial-gradient(circle at 100% 0%, rgba(236,72,153,0.08) 0%, transparent 40%),
-        #F7F8FF;
+        radial-gradient(circle at 0% 0%, rgba(217,119,6,0.10) 0%, transparent 40%),
+        radial-gradient(circle at 100% 0%, rgba(249,115,22,0.08) 0%, transparent 40%),
+        #FFF7ED;
 }
 [data-testid="stMain"] .block-container { padding-top: 1.5rem; padding-bottom: 3rem; max-width: 1240px; }
 #MainMenu, footer { visibility: hidden; }
@@ -123,13 +123,13 @@ h1, h2, h3 { color: var(--ink); letter-spacing: -0.02em; }
 
 /* ── Badges ───────────────────────────────────────── */
 .badge { border-radius: 999px; padding: 3px 11px; font-size: 0.72rem; font-weight: 700; display: inline-block; }
-.badge-high   { background:#FFE4E6; color:#BE123C; }
+.badge-high   { background:#FEE2E2; color:#B91C1C; }
 .badge-medium { background:#FEF3C7; color:#B45309; }
-.badge-low    { background:#D1FAE5; color:#047857; }
-.badge-learn    { background:#DBEAFE; color:#1D4ED8; }
-.badge-practice { background:#E0E7FF; color:#4338CA; }
-.badge-revision { background:#FCE7F3; color:#BE185D; }
-.badge-quiz     { background:#CCFBF1; color:#0F766E; }
+.badge-low    { background:#ECFCCB; color:#4D7C0F; }
+.badge-learn    { background:#FFEDD5; color:#C2410C; }
+.badge-practice { background:#FEF3C7; color:#B45309; }
+.badge-revision { background:#FFEDD5; color:#C2410C; }
+.badge-quiz     { background:#FFEDD5; color:#9A3412; }
 .badge-mock     { background:#FFEDD5; color:#C2410C; }
 
 /* ── Section headers ──────────────────────────────── */
@@ -161,18 +161,18 @@ h1, h2, h3 { color: var(--ink); letter-spacing: -0.02em; }
 .session-card.p-high   { border-left-color: var(--rose); }
 .session-card.p-medium { border-left-color: var(--amber); }
 .session-card.p-low    { border-left-color: var(--emerald); }
-.session-card.completed { opacity: 0.6; background: #F0FDF4; border-left-color: var(--emerald); }
+.session-card.completed { opacity: 0.6; background: #F7FEE7; border-left-color: var(--emerald); }
 .session-card .meta { font-size: 0.82rem; color: var(--muted); }
 
 .weak-chip {
-    display: inline-block; background: #FFF1F2; color: #BE123C;
-    border: 1px solid #FECDD3; border-radius: 999px;
+    display: inline-block; background: #FFF7ED; color: #C2410C;
+    border: 1px solid #FED7AA; border-radius: 999px;
     padding: 4px 12px; margin: 0 6px 8px 0; font-size: 0.82rem; font-weight: 600;
 }
 
 .ai-box {
-    background: linear-gradient(135deg, #EEF2FF 0%, #FDF2F8 100%);
-    border: 1px solid #DDD6FE; border-radius: 16px;
+    background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%);
+    border: 1px solid #FED7AA; border-radius: 16px;
     padding: 1rem 1.3rem; font-size: 0.96rem; line-height: 1.7; color: var(--ink);
 }
 
@@ -194,14 +194,18 @@ h1, h2, h3 { color: var(--ink); letter-spacing: -0.02em; }
 
 /* ── Sidebar ──────────────────────────────────────── */
 [data-testid="stSidebar"] {
-    background: linear-gradient(180deg, #4F46E5 0%, #7C3AED 55%, #DB2777 100%);
+    background: linear-gradient(180deg, #9A3412 0%, #C2410C 55%, #EA580C 100%);
+}
+[data-testid="stSidebar"] > div:first-child,
+[data-testid="stSidebar"] [data-testid="stSidebarContent"] {
+    background: transparent;
 }
 [data-testid="stSidebar"] .block-container { padding-top: 1.5rem; }
 [data-testid="stSidebar"] h1, [data-testid="stSidebar"] h2, [data-testid="stSidebar"] h3,
 [data-testid="stSidebar"] p, [data-testid="stSidebar"] label, [data-testid="stSidebar"] span,
 [data-testid="stSidebar"] em { color: #fff; }
-[data-testid="stSidebar"] hr { border-color: rgba(255,255,255,0.25); }
-[data-testid="stSidebar"] [data-baseweb="select"] > div { background: #fff; border-radius: 12px; border: none; }
+[data-testid="stSidebar"] hr { border-color: rgba(255,237,213,0.38); }
+[data-testid="stSidebar"] [data-baseweb="select"] > div { background: #FFF7ED; border-radius: 12px; border: none; }
 [data-testid="stSidebar"] [data-baseweb="select"] * { color: var(--ink) !important; }
 
 .brand { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.2rem; }
@@ -235,7 +239,7 @@ h1, h2, h3 { color: var(--ink); letter-spacing: -0.02em; }
 }
 [data-testid="stSidebar"] .stButton > button[kind="primary"],
 [data-testid="stSidebar"] button[data-testid="stBaseButton-primary"] {
-    background: #fff; color: #4F46E5; box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+    background: #FFF7ED; color: #9A3412; box-shadow: 0 6px 16px rgba(67,20,7,0.24);
 }
 [data-testid="stSidebar"] .stButton > button > div { justify-content: flex-start !important; width: 100%; }
 [data-testid="stSidebar"] .stButton > button * { text-align: left; }
@@ -246,15 +250,15 @@ h1, h2, h3 { color: var(--ink); letter-spacing: -0.02em; }
 [data-testid="stSidebar"] button[data-testid="stBaseButton-primary"],
 [data-testid="stSidebar"] button[data-testid="stBaseButton-primary"] *,
 [data-testid="stSidebar"] .stButton > button[kind="primary"],
-[data-testid="stSidebar"] .stButton > button[kind="primary"] * { color: #4F46E5 !important; font-weight: 800; }
+[data-testid="stSidebar"] .stButton > button[kind="primary"] * { color: #9A3412 !important; font-weight: 800; }
 [data-testid="stSidebar"] button[data-testid="stBaseButton-primary"],
-[data-testid="stSidebar"] .stButton > button[kind="primary"] { background: #fff !important; }
+[data-testid="stSidebar"] .stButton > button[kind="primary"] { background: #FFF7ED !important; }
 
 /* Force light look on sidebar select + progress bars even if the browser is in dark mode */
-[data-testid="stSidebar"] [data-baseweb="select"] > div { background: #fff !important; }
-[data-testid="stSidebar"] [data-baseweb="select"] * { color: #1E1B4B !important; fill: #1E1B4B !important; }
-[data-testid="stProgress"] [data-baseweb="progress-bar"] > div { background: #E8EAFD !important; border-radius: 999px; }
-[data-testid="stProgress"] [data-baseweb="progress-bar"] > div > div { background: linear-gradient(90deg, #6366F1, #EC4899) !important; border-radius: 999px; }
+[data-testid="stSidebar"] [data-baseweb="select"] > div { background: #FFF7ED !important; }
+[data-testid="stSidebar"] [data-baseweb="select"] * { color: var(--ink) !important; fill: var(--ink) !important; }
+[data-testid="stProgress"] [data-baseweb="progress-bar"] > div { background: var(--line) !important; border-radius: 999px; }
+[data-testid="stProgress"] [data-baseweb="progress-bar"] > div > div { background: linear-gradient(90deg, var(--indigo), var(--pink)) !important; border-radius: 999px; }
 
 /* ── Main buttons ─────────────────────────────────── */
 [data-testid="stMain"] .stButton > button, [data-testid="stMain"] [data-testid="stFormSubmitButton"] > button {
@@ -267,7 +271,7 @@ h1, h2, h3 { color: var(--ink); letter-spacing: -0.02em; }
 [data-testid="stMain"] [data-testid="stFormSubmitButton"] > button[kind="primary"],
 [data-testid="stMain"] button[data-testid="stBaseButton-primaryFormSubmit"] {
     background: var(--grad-main); color: #fff; border: none;
-    box-shadow: 0 8px 20px rgba(139,92,246,0.35);
+    box-shadow: 0 8px 20px rgba(234,88,12,0.35);
 }
 [data-testid="stMain"] .stButton > button[kind="primary"]:hover,
 [data-testid="stMain"] button[data-testid="stBaseButton-primary"]:hover { color: #fff; filter: brightness(1.08); }
@@ -284,7 +288,7 @@ h1, h2, h3 { color: var(--ink); letter-spacing: -0.02em; }
     border: 1.5px solid var(--line) !important;
 }
 [data-testid="stMain"] [data-baseweb="input"]:focus-within > div, [data-testid="stMain"] [data-baseweb="textarea"]:focus-within {
-    border-color: var(--indigo) !important; box-shadow: 0 0 0 3px rgba(99,102,241,0.18) !important;
+    border-color: var(--indigo) !important; box-shadow: 0 0 0 3px rgba(217,119,6,0.18) !important;
 }
 
 /* ── Forms, expanders, tabs ───────────────────────── */
@@ -308,7 +312,7 @@ h1, h2, h3 { color: var(--ink); letter-spacing: -0.02em; }
 
 /* ── Progress bar ─────────────────────────────────── */
 .stProgress > div > div > div > div { background: var(--grad-main); border-radius: 999px; }
-.stProgress > div > div > div { background: #E8EAFD; border-radius: 999px; }
+.stProgress > div > div > div { background: var(--line); border-radius: 999px; }
 
 /* ── Alerts ───────────────────────────────────────── */
 [data-testid="stAlert"] { border-radius: 14px; border: none; }
@@ -325,8 +329,8 @@ div[role="radiogroup"] > label {
     background: #fff; border: 1.5px solid var(--line); border-radius: 12px;
     padding: 0.65rem 1rem; transition: all .15s ease; width: 100%;
 }
-div[role="radiogroup"] > label:hover { border-color: var(--indigo); background: #F5F6FF; transform: translateX(3px); }
-div[role="radiogroup"] > label:has(input:checked) { border-color: var(--indigo); background: #EEF2FF; }
+div[role="radiogroup"] > label:hover { border-color: var(--indigo); background: #FFF7ED; transform: translateX(3px); }
+div[role="radiogroup"] > label:has(input:checked) { border-color: var(--indigo); background: #FFEDD5; }
 
 .quiz-q {
     background: var(--card); border: 1px solid var(--line); border-radius: 16px;
@@ -346,18 +350,18 @@ div[role="radiogroup"] > label:has(input:checked) { border-color: var(--indigo);
 [data-testid="stChatInput"] { border-radius: 16px; }
 
 /* ── Dark-mode safety: keep text readable on our light surfaces ── */
-[data-testid="stAlert"], [data-testid="stAlert"] * { color: #1E1B4B !important; }
+[data-testid="stAlert"], [data-testid="stAlert"] * { color: var(--ink) !important; }
 [data-testid="stAlert"] { font-weight: 500; }
 [data-testid="stMain"] [data-testid="stWidgetLabel"] *,
-[data-testid="stMain"] label { color: #1E1B4B !important; font-weight: 600; }
+[data-testid="stMain"] label { color: var(--ink) !important; font-weight: 600; }
 [data-testid="stMain"] [data-testid="stMarkdownContainer"] p,
-[data-testid="stMain"] [data-testid="stMarkdownContainer"] li { color: #1E1B4B; }
-[data-testid="stMain"] [data-testid="stMarkdownContainer"] em { color: #64748B; }
-[data-testid="stToolbar"] * { color: #1E1B4B !important; }
-[data-testid="stMain"] [data-baseweb="select"] * { color: #1E1B4B !important; }
-[data-testid="stMain"] input, [data-testid="stMain"] textarea { color: #1E1B4B !important; }
-[data-testid="stSidebar"] [data-baseweb="select"] div { background-color: #fff !important; }
-[data-testid="stSidebar"] [data-baseweb="select"] > div { border: 2px solid rgba(255,255,255,0.6) !important; }
+[data-testid="stMain"] [data-testid="stMarkdownContainer"] li { color: var(--ink); }
+[data-testid="stMain"] [data-testid="stMarkdownContainer"] em { color: var(--muted); }
+[data-testid="stToolbar"] * { color: var(--ink) !important; }
+[data-testid="stMain"] [data-baseweb="select"] * { color: var(--ink) !important; }
+[data-testid="stMain"] input, [data-testid="stMain"] textarea { color: var(--ink) !important; }
+[data-testid="stSidebar"] [data-baseweb="select"] div { background-color: #FFF7ED !important; }
+[data-testid="stSidebar"] [data-baseweb="select"] > div { border: 2px solid rgba(255,237,213,0.72) !important; }
 
 /* ── Tabs (My Notes) ── */
 .stTabs [data-baseweb="tab-list"] { gap: 10px; padding: 6px 0 14px; border-bottom: none; }
@@ -365,9 +369,9 @@ div[role="radiogroup"] > label:has(input:checked) { border-color: var(--indigo);
     height: auto; min-height: 44px; padding: 0.55rem 1.3rem; border-radius: 999px;
     background: #fff; border: 1.5px solid var(--line); box-shadow: var(--shadow-sm);
 }
-.stTabs [data-baseweb="tab"] p { color: #1E1B4B; font-weight: 700; margin: 0; font-size: 0.95rem; }
+.stTabs [data-baseweb="tab"] p { color: var(--ink); font-weight: 700; margin: 0; font-size: 0.95rem; }
 .stTabs [data-baseweb="tab"]:hover { border-color: var(--indigo); }
-.stTabs [aria-selected="true"] { background: var(--grad-main) !important; border: none !important; box-shadow: 0 8px 20px rgba(139,92,246,0.35); }
+.stTabs [aria-selected="true"] { background: var(--grad-main) !important; border: none !important; box-shadow: 0 8px 20px rgba(234,88,12,0.35); }
 .stTabs [aria-selected="true"] p { color: #fff !important; }
 
 /* ── Tabs v2 (reliable selectors) ── */
@@ -377,28 +381,28 @@ div[role="radiogroup"] > label:has(input:checked) { border-color: var(--indigo);
 [data-baseweb="tabs"] button[role="tab"] {
     height: auto !important; min-height: 46px !important; padding: 0.6rem 1.5rem !important;
     border-radius: 999px !important; background: #FFFFFF !important;
-    border: 1.5px solid #E8EAFD !important; box-shadow: 0 2px 8px rgba(99,102,241,0.08) !important;
+    border: 1.5px solid var(--line) !important; box-shadow: var(--shadow-sm) !important;
     margin: 0 !important; transition: all .18s ease;
 }
-[data-baseweb="tabs"] button[role="tab"] * { color: #1E1B4B !important; font-weight: 700 !important; }
-[data-baseweb="tabs"] button[role="tab"]:hover { border-color: #6366F1 !important; transform: translateY(-1px); }
+[data-baseweb="tabs"] button[role="tab"] * { color: var(--ink) !important; font-weight: 700 !important; }
+[data-baseweb="tabs"] button[role="tab"]:hover { border-color: var(--indigo) !important; transform: translateY(-1px); }
 [data-baseweb="tabs"] button[role="tab"][aria-selected="true"] {
-    background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #EC4899 100%) !important;
-    border: none !important; box-shadow: 0 8px 20px rgba(139,92,246,0.35) !important;
+    background: var(--grad-main) !important;
+    border: none !important; box-shadow: 0 8px 20px rgba(234,88,12,0.35) !important;
 }
 [data-baseweb="tabs"] button[role="tab"][aria-selected="true"] * { color: #FFFFFF !important; }
 
 /* Main-area dropdowns: white box, dark text (fixes dark select in dark mode) */
 [data-testid="stMain"] [data-baseweb="select"] > div,
 [data-testid="stMain"] [data-baseweb="select"] > div > div { background-color: #FFFFFF !important; }
-[data-testid="stMain"] [data-baseweb="select"] > div { border: 1.5px solid #E8EAFD !important; border-radius: 12px !important; }
-[data-baseweb="popover"] [role="listbox"], [data-baseweb="popover"] li { background: #FFFFFF !important; color: #1E1B4B !important; }
-[data-baseweb="popover"] li * { color: #1E1B4B !important; }
-[data-baseweb="popover"] li:hover, [data-baseweb="popover"] li[aria-selected="true"] { background: #EEF2FF !important; }
+[data-testid="stMain"] [data-baseweb="select"] > div { border: 1.5px solid var(--line) !important; border-radius: 12px !important; }
+[data-baseweb="popover"] [role="listbox"], [data-baseweb="popover"] li { background: #FFFFFF !important; color: var(--ink) !important; }
+[data-baseweb="popover"] li * { color: var(--ink) !important; }
+[data-baseweb="popover"] li:hover, [data-baseweb="popover"] li[aria-selected="true"] { background: #FFF7ED !important; }
 
 /* ── File uploader ── */
 [data-testid="stFileUploaderDropzone"] {
-    background: #fff; border: 2px dashed #C7D2FE; border-radius: 18px; padding: 1.4rem;
+    background: #fff; border: 2px dashed #FDBA74; border-radius: 18px; padding: 1.4rem;
 }
 [data-testid="stFileUploaderDropzone"]:hover { border-color: var(--indigo); background: #F5F6FF; }
 [data-testid="stFileUploaderDropzone"] *, [data-testid="stFileUploader"] small { color: #475569 !important; }
@@ -434,33 +438,33 @@ div[role="radiogroup"] > label:has(input:checked) { border-color: var(--indigo);
 [data-testid="stMain"] [data-baseweb="select"] div[value],
 [data-testid="stMain"] [data-baseweb="select"] span,
 [data-testid="stMain"] [data-baseweb="select"] [class*="singleValue"] {
-    color: #1E1B4B !important; -webkit-text-fill-color: #1E1B4B !important;
-    background: transparent !important; caret-color: #6366F1;
+    color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important;
+    background: transparent !important; caret-color: var(--indigo);
 }
 [data-testid="stMain"] input::placeholder,
 [data-testid="stMain"] textarea::placeholder { color: #94A3B8 !important; -webkit-text-fill-color: #94A3B8 !important; opacity: 1; }
 [data-testid="stMain"] [data-baseweb="select"] svg,
-[data-testid="stMain"] [data-testid="stNumberInput"] svg { fill: #6366F1 !important; color: #6366F1 !important; }
+[data-testid="stMain"] [data-testid="stNumberInput"] svg { fill: var(--indigo) !important; color: var(--indigo) !important; }
 [data-testid="stMain"] [data-testid="stNumberInput"] button {
-    background: #EEF2FF !important; color: #6366F1 !important; border: none !important;
+    background: #FFF7ED !important; color: var(--indigo) !important; border: none !important;
 }
-[data-testid="stMain"] [data-testid="stNumberInput"] button:hover { background: #E0E7FF !important; }
+[data-testid="stMain"] [data-testid="stNumberInput"] button:hover { background: #FFEDD5 !important; }
 [data-testid="stMain"] [data-baseweb="input"]:focus-within,
 [data-testid="stMain"] [data-baseweb="textarea"]:focus-within,
 [data-testid="stMain"] [data-baseweb="select"]:focus-within > div {
-    border-color: #6366F1 !important; box-shadow: 0 0 0 3px rgba(99,102,241,0.18) !important;
+    border-color: var(--indigo) !important; box-shadow: 0 0 0 3px rgba(217,119,6,0.18) !important;
 }
 /* Open dropdown menus & calendar popups */
 [data-baseweb="popover"], [data-baseweb="popover"] > div, [data-baseweb="menu"], [data-baseweb="calendar"] {
-    background: #FFFFFF !important; color: #1E1B4B !important;
+    background: #FFFFFF !important; color: var(--ink) !important;
 }
-[data-baseweb="calendar"] * { color: #1E1B4B; }
+[data-baseweb="calendar"] * { color: var(--ink); }
 /* Sidebar select: keep white box + dark text */
 [data-testid="stSidebar"] [data-baseweb="select"] input,
 [data-testid="stSidebar"] [data-baseweb="select"] span,
-[data-testid="stSidebar"] [data-baseweb="select"] div { color: #1E1B4B !important; -webkit-text-fill-color: #1E1B4B !important; }
+[data-testid="stSidebar"] [data-baseweb="select"] div { color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; }
 /* Slider labels/values */
-[data-testid="stMain"] [data-testid="stSlider"] * { color: #1E1B4B; }
+[data-testid="stMain"] [data-testid="stSlider"] * { color: var(--ink); }
 </style>
 """,
     unsafe_allow_html=True,
@@ -486,12 +490,12 @@ def api_get(path: str, params: dict = None):
         return None, f"Unexpected error: {e}"
 
 
-def api_post(path: str, json_data: dict = None, files=None, data=None):
+def api_post(path: str, json_data: dict = None, files=None, data=None, timeout: int = 120):
     try:
         if files or data:
-            r = requests.post(f"{BACKEND_URL}{path}", files=files, data=data, timeout=120)
+            r = requests.post(f"{BACKEND_URL}{path}", files=files, data=data, timeout=timeout)
         else:
-            r = requests.post(f"{BACKEND_URL}{path}", json=json_data, timeout=120)
+            r = requests.post(f"{BACKEND_URL}{path}", json=json_data, timeout=timeout)
         r.raise_for_status()
         return r.json(), None
     except requests.exceptions.ConnectionError:
@@ -711,7 +715,7 @@ def style_fig(fig, height: int = 300, legend: bool = False):
         legend=dict(orientation="h", y=1.12, x=0),
         hoverlabel=dict(font_family="Plus Jakarta Sans, sans-serif"),
     )
-    fig.update_yaxes(gridcolor="#E8EAFD", zeroline=False)
+    fig.update_yaxes(gridcolor="#FED7AA", zeroline=False)
     fig.update_xaxes(showgrid=False)
     return fig
 
@@ -868,7 +872,7 @@ def page_dashboard():
                     name="Planned",
                     x=[s["subject_name"] for s in subjects],
                     y=[s["planned_hours"] for s in subjects],
-                    marker=dict(color="#C7D2FE", cornerradius=8),
+                    marker=dict(color="#FDBA74", cornerradius=8),
                 )
             )
             fig_subj.add_trace(
@@ -1002,8 +1006,15 @@ def page_study_planner():
         )
 
     if generate_btn:
-        with st.spinner("🧠 AI is building your personalised study plan... (this may take 30-60 seconds)"):
-            result, err = api_post("/study-plan/generate", {"student_id": sid})
+        with st.spinner(
+            "🧠 AI is building your personalised study plan... "
+            "(longer exam periods may take several minutes)"
+        ):
+            result, err = api_post(
+                "/study-plan/generate",
+                {"student_id": sid},
+                timeout=600,
+            )
 
         if err:
             st.error(f"Could not generate plan: {err}")
@@ -1571,7 +1582,7 @@ def page_progress():
                 line=dict(color=VIOLET, width=3, shape="spline"),
                 marker=dict(size=10, color=PINK, line=dict(color="#fff", width=2)),
                 fill="tozeroy",
-                fillcolor="rgba(139,92,246,0.15)",
+                fillcolor="rgba(234,88,12,0.15)",
             )
         )
         style_fig(fig_weekly, 280)
